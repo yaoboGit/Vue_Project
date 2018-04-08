@@ -1,0 +1,158 @@
+html,body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+div::-webkit-scrollbar {
+  width:10px;
+  height:10px;
+}
+
+div::-webkit-scrollbar-button  { // 滚动条两边的按钮
+  display: none;
+}
+div::-webkit-scrollbar-track     { // 外层轨道
+  display: none;
+}
+div::-webkit-scrollbar-thumb{
+  background: #cccccc;
+  border-radius:4px;
+}
+
+.flex-layout {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background: url("../img/bg_main.jpg");
+}
+
+.text-center {
+  text-align: center;
+}
+
+.icon {
+  display: inline-block;
+  cursor: pointer;
+  background: url("../img/icons.png");
+}
+
+.icon-message {
+  background-position: -264px -264px;
+  width: 20px;
+  height: 20px;
+}
+
+.icon-message:hover {
+  background-position: -288px -264px;
+  transition: all .3s ease-out;
+}
+
+.icon-message-light {
+  background-position: -288px -264px;
+  width: 20px;
+  height: 20px;
+}
+
+.icon-person {
+  background-position: -313px -264px;
+  width: 18px;
+  height: 20px;
+}
+
+.icon-person:hover {
+  background-position: -337px -264px;
+  transition: all .3s ease-out;
+}
+
+.icon-person-light {
+  background-position: -337px -264px;
+  width: 18px;
+  height: 20px;
+}
+
+.avatar-uploader {
+  text-align: center;
+}
+
+.avatar-uploader .el-upload {
+  border: 1px dashed #d9d9d9;
+  border-radius: 6px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+.avatar-uploader .el-upload:hover {
+  border-color: #409EFF;
+}
+.avatar-uploader-icon {
+  font-size: 28px;
+  color: #8c939d;
+  width: 120px;
+  height: 120px;
+  line-height: 120px;
+  text-align: center;
+}
+.avatar {
+  width: 120px;
+  height: 120px;
+  display: block;
+}
+
+/** 聊天气泡样式 **/
+.im-chat-cli {
+  position: relative;
+  min-height: 40px; width: 100%;
+  padding: 10px 0;
+}
+.im-chat-clil {
+  float: left;
+  text-align: left;
+}
+
+.im-chat-clir {
+  float: right;
+  text-align: right;
+}
+.im-chat-cli > img { width: 40px; height: 40px; border-radius: 20px; }
+.im-chat-cli > div {
+  display: inline-block;
+  border-radius: 4px;
+}
+.im-chat-clil > img {  position: absolute; top: 10px; left: 20px;  }
+.im-chat-clir > img {  position: absolute; top: 10px; right: 20px;  }
+.im-chat-clil > div {
+  margin-left: 70px;
+  margin-right: 10px;
+  padding: 10px 20px 10px 20px;
+  background-color: #ffe0c7;
+}
+.im-chat-clil > div::before {
+  position: absolute; left: 65px; top: 22px;
+  border-right: 7px solid #ffe0c7; border-top: 7px solid transparent; border-bottom: 7px solid transparent;
+  display: inline-block; content: "";
+  box-sizing: border-box;
+}
+.im-chat-clir > div {
+  margin-right: 70px;
+  margin-left: 10px;
+  padding: 10px 20px 10px 20px;
+  background-color: #cbe0ff;
+}
+.im-chat-clir > div::before {
+  position: absolute; right: 65px; top: 22px;
+  border-left: 7px solid #cbe0ff; border-top: 7px solid transparent; border-bottom: 7px solid transparent;
+  display: inline-block; content: "";
+  box-sizing: border-box;
+}
